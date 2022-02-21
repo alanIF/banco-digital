@@ -8,10 +8,8 @@
  *
  * @author Admin
  */
-public class ContaPoupanca extends Conta{
-     private static int SEQUENCIAL=0;
-
-    public ContaPoupanca(){
-        super.numero= SEQUENCIAL++; 
-    }
+public interface IConta {
+    void sacar(double valor);
+    void depositar(double valor);
+    void transferir(double valor, Conta contaDestino);
 }
