@@ -9,9 +9,12 @@
  * @author Admin
  */
 public class ContaPoupanca extends Conta{
-     private static int SEQUENCIAL=0;
-
-    public ContaPoupanca(){
-        super.numero= SEQUENCIAL++; 
-    }
+    public ContaPoupanca(Cliente cliente){
+       super(cliente);
+   }
+   @Override
+   public void imprimirExtrato(){
+       System.out.println("=== Extrato Conta Poupança ===");
+       super.imprimirInfosComuns();
+   }
 }
