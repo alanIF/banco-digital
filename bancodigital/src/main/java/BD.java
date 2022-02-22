@@ -8,11 +8,16 @@
  *
  * @author Admin
  */
-public class ContaPoupanca extends Conta{
-   
-   @Override
-   public void imprimirExtrato(){
-       System.out.println("=== Extrato Conta Poupança ===");
-       super.imprimirInfosComuns();
-   }
+
+public class BD {
+    private ClienteDAO clientes;
+    public BD(){
+        this.clientes= new ClienteDAO();
+    }
+    public ClienteDAO getClientes() {
+        return clientes;
+    }
+
+
+    
 }
